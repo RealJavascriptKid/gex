@@ -2,7 +2,7 @@ const yahooFinance = require("yahoo-finance2").default;
 const { normPdf,sortByProperty } = require("./mathUtils"); // A helper function for normal distribution PDF
 const fs = require('fs');
 
-let tickers = ["NVDA","QQQ", "SPY","TSLA","AAPL","GOOGL","META"] 
+let tickers = require('./tickers') 
 
 // Black-Scholes Gamma Calculation
 function calculateGamma(S, K, T, r, sigma) {
